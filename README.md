@@ -1,7 +1,7 @@
-# exodia-eww
-EWW widgets for Exodia OS
+<h1 align="center"> EWW widgets for Exodia OS  </h1>
 
-<h3 align="center"> Keybinding ⌨️  </h3>
+
+### Keybinding ⌨️
 
 mod -> super (window key)
 
@@ -77,3 +77,18 @@ KEY=57f757c35e2fc8************
 ```bash
 ID=360995  
 ```
+
+<!-- EWW -->
+
+#
+
+
+<h3 align="center"> 🦋 showcase 🦋 </h3>
+
+| 🦋 | 🦋 |
+|--|--|
+| ![](imgs/view-4.png) | ![](imgs/view-1.png) |
+| ![](imgs/view-2.png) | ![](imgs/view-3.png) |
+
+<!-- EWW -->
+
