@@ -1,0 +1,28 @@
+#
+# Maintainer: Mahmoud Mohamed (Ozil) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
+#
+
+pkgname=exodia-eww
+_pkgname=eww
+pkgver=1.0
+pkgrel=1
+pkgdesc="EWW widgets for Exodia OS"
+arch=('any')
+url="https://github.com/Exodia-OS/exodia-eww"
+license=('MIT')
+depends=('eww')
+install=${_pkgname}.install
+
+prepare() {
+
+	cp -af ../${_pkgname} ${srcdir}
+
+}
+
+package() {
+
+	CONFIG_DIR=${pkgdir}/etc/skel/.config
+	mkdir -p ${CONFIG_DIR}
+
+	cp -r ${srcdir}/${_pkgname} ${CONFIG_DIR}
+}
