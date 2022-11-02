@@ -1,6 +1,14 @@
 # exodia-eww
 EWW widgets for Exodia OS
 
+<h3 align="center"> Keybinding ⌨️  </h3>
+
+mod -> super (window key)
+
+| Keys | Action |
+| --- | --- |
+| <kbd>mod + d</kbd> | Open/Close eww |
+
 
 # Tips 
 
