@@ -5,7 +5,7 @@
 pkgname=exodia-eww
 _pkgname=eww
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="EWW widgets for Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-eww"

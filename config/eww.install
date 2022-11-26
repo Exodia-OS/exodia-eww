@@ -25,12 +25,25 @@ USER=`echo ${SUDO_USER:-$(whoami)}`
 GID=`echo ${SUDO_GID}`
 GROUB=`cat /etc/group | grep ${GID} | cut -d: -f1 | head -1`
 CONFIG_DIR="/home/${USER}/.config"
+BACKUP_DIR="/home/${USER}/.config/exodia-backups"
 CONFIG_DIR_SKEL='/etc/skel/.config'
-
 PKG_NAME='exodia-eww'
 FILES_NAME='eww'
 
 ## ------------ INSTALL CONFIG FILES ------------ ##
+
+# BACKUP FUNCTION #
+BACKUP (){
+
+	echo -e ${Purple}"\n[*] Creating a backup of your current ${BPurple}${PKG_NAME}${Purple} config..." ${Color_Off}
+	BACKUP_NAME=`date +%m-%d`
+	BACKUP_RANDOM="`echo $RANDOM`"
+	mkdir -p ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+	mv ${CONFIG_DIR}/${FILES_NAME} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+	chown -R ${USER}:${GROUB} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+	echo -e ${Yellow}"[*] Your current config files are stored in : ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM} ." ${Color_Off}
+
+}
 
 # INSTALL FUNCTION #
 INSTALL (){
@@ -57,16 +70,19 @@ RUN_MAIN (){
 
 	else
 
-		INSTALL
+		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" ]]
+			then
+				
+				INSTALL
+
+		else
+				BACKUP
+				INSTALL
+		fi
 
 	fi
 
 }
-
-
-
-
-
 
 
 post_install() {
