@@ -10,7 +10,8 @@ mod -> super (window key)
 | <kbd>mod + d</kbd> | Open/Close eww |
 
 
-# Tips 
+<details>
+   <summary><h3> Tips</h3></summary>
 
 ### configure mail script
 - open [google App passwords](https://myaccount.google.com/apppasswords)
@@ -78,17 +79,17 @@ KEY=57f757c35e2fc8************
 ID=360995  
 ```
 
-<!-- EWW -->
+</details>
 
-#
 
+<!-- showcase -->
 
 <h3 align="center"> 🦋 showcase 🦋 </h3>
 
 | 🦋 | 🦋 |
 |--|--|
-| ![](imgs/view-4.png) | ![](imgs/view-1.png) |
-| ![](imgs/view-2.png) | ![](imgs/view-3.png) |
+| ![](imgs/view-1.png) | ![](imgs/view-2.png) |
+| ![](imgs/view-3.png) | ![](imgs/view-4.png) |
+| ![](imgs/view-5.png) | ![](imgs/view-6.png) |
 
-<!-- EWW -->
-
+<!-- showcase -->
